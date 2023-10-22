@@ -1,0 +1,5 @@
+	.ORIG	x3000
+F	ADD	R2,R3,#5
+	HALT
+F	.FILL	x3000
+	.END

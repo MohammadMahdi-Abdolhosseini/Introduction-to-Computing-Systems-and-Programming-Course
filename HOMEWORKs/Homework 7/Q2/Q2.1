@@ -1,0 +1,31 @@
+	.ORIG	x3000
+	LEA	R0,x16
+	LDR	R0,R0,#0	; R0 = x1000
+	AND	R2,R2,#0	; FREE R2
+	LEA	R2,x14
+	LDR	R2,R2,#0	; R2 = 100 (lenght of array)
+	AND 	R3,R3,#0 	; FREE R3
+				; R3 is Result of SUM
+SUM	LDR	R1,R0,#0	; R1 = ARRAY[i]
+	ADD	R3,R3,R1	; SUM = SUM + ARRAY[i]
+	ADD	R0,R0,#1	; Next index
+	ADD	R2,R2,#-1
+	BRP	SUM		; Until R2 > 0 Do SUM
+	AND	R4,R4,#0	; FREE R4
+				; R4 is Final Result
+	LEA	R2,xC		
+	LDR	R2,R2,#0	; R2 = -100
+LOOP	ADD	R3,R3,R2	; R3 = R3 + R2 : SUM = SUM - 100
+	BRn 	LEAVE
+	ADD	R3,R3,R5	; R3 = R3 + R5 : RESULT = RESULT - X
+	ADD	R4,R4,#1	; Result++
+	BR	LOOP
+LEAVE	LEA	R3,x6
+	LDR	R3,R3,#0	; R3 = x2000
+	STR	R4,R3,#0	; Result stored in x2000	
+	HALT
+ARRAY	.FILL	x1000
+L1	.FILL	x0064
+L2	.FILL	xFF9C
+DST	.FILL	x2000
+	.END

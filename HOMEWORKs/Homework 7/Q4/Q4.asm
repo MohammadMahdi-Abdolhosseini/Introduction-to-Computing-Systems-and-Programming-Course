@@ -1,0 +1,15 @@
+	.ORIG 	3000
+	LD 	R1,X 		; R1 = X
+	LD 	R2,Y 		; R2 = Y
+	AND 	R3,R3,#0 	; FREE R3
+				; F3 IS RESULT
+	AND	R4,R4,#0	; FREE R4
+				; F4 IS TEMP
+	ADD	R4,R4,R2	; R4 = Y
+LOOP 	ADD 	R3,R3,R1 	; R3 IS SUM AND SUM = SUM + X
+	ADD 	R4,R4,#-1 	; DO THIS LOOP Y TIMES
+	BRp 	LOOP		; IF R4 > 0 GO TO LOOP
+	HALT
+X 	.FILL 	#9
+Y 	.FILL 	#4
+	.END

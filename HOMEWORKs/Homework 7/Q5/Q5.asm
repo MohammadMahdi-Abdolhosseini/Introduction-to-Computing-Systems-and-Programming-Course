@@ -1,0 +1,25 @@
+	.ORIG	x3000
+	LD	R1,X	; R1 = X
+	LD	R2,Y	; R2 = Y
+	; R2 % R1 = ?
+	AND 	R3,R3,#0 	; FREE R3
+				; R3 IS RESULT
+	ADD	R3,R3,R2	; R3 = Y
+	AND	R4,R4,#0	; FREE R4
+				; F4 IS TEMP
+	ADD	R4,R4,R2	; R4 = Y
+	AND	R5,R5,#0	; FREE R5
+				; R5 IS TEMP2
+	ADD	R5,R5,R1	; R5 = X
+	NOT	R5,R5		; R5 = NOT(X)
+	ADD	R5,R5,#1	; R5 = -X
+LOOP	ADD	R4,R4,R5	; R4 = R4 + R5 : SUM = SUM - X
+	BRn 	LEAVE
+	ADD	R3,R3,R5	; R3 = R3 + R5 : RESULT = RESULT - X
+	BR	LOOP
+LEAVE	AND	R4,R4,#0	; FREE R4	
+	AND	R5,R5,#0	; FREE R5
+	HALT
+X 	.FILL 	x5
+Y 	.FILL 	x59
+	.END
