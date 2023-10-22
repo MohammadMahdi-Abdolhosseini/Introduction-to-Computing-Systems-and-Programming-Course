@@ -1,0 +1,8 @@
+﻿  Donot Test1.cpp
+c:\users\lenovo\desktop\قابل ارائه\visual studio [projects]\repos\donot test1\donot test1\donot test1.cpp(16): warning C4326: return type of 'main' should be 'int' instead of 'void'
+c:\users\lenovo\desktop\قابل ارائه\visual studio [projects]\repos\donot test1\donot test1\donot test1.cpp(37): warning C4554: '>>': check operator precedence for possible error; use parentheses to clarify precedence
+c:\users\lenovo\desktop\قابل ارائه\visual studio [projects]\repos\donot test1\donot test1\donot test1.cpp(45): warning C4554: '>>': check operator precedence for possible error; use parentheses to clarify precedence
+c:\users\lenovo\desktop\قابل ارائه\visual studio [projects]\repos\donot test1\donot test1\donot test1.cpp(47): warning C4554: '>>': check operator precedence for possible error; use parentheses to clarify precedence
+c:\users\lenovo\desktop\قابل ارائه\visual studio [projects]\repos\donot test1\donot test1\donot test1.cpp(51): warning C4554: '>>': check operator precedence for possible error; use parentheses to clarify precedence
+c:\users\lenovo\desktop\قابل ارائه\visual studio [projects]\repos\donot test1\donot test1\donot test1.cpp(52): warning C4554: '>>': check operator precedence for possible error; use parentheses to clarify precedence
+  Donot Test1.vcxproj -> C:\Users\lenovo\Desktop\قابل ارائه\Visual Studio [projects]\repos\Donot Test1\Debug\Donot Test1.exe
